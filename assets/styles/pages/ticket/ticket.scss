@@ -1,0 +1,104 @@
+.page-ticket {
+  padding: 30px;
+  background: rgba(23, 27, 32, 0.68);
+  border-radius: 12px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $line_clr;
+    margin-bottom: 20px;
+
+    p {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.012em;
+      font-variant: small-caps;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #62646C;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.012em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #DBDBDB;
+    }
+
+    &-status {
+      padding: 8px 16px;
+      background: rgba(45, 156, 219, 0.06);
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #2D9CDB;
+    }
+  }
+}
+
+.ticket {
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &-status {
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2D9CDB;
+    background: rgba(45, 156, 219, 0.06);
+    display: inline-block;
+
+    &_solved {
+      background: rgba(118, 219, 161, 0.04);
+      color: #76DBA1;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page-ticket {
+    padding: 30px 15px;
+  }
+
+  .page-ticket-chat__problems-item {
+    white-space: unset;
+    line-height: 120%;
+  }
+
+  .page-ticket-chat__input {
+    grid-template-columns: 1fr 94px;
+  }
+
+  .page-ticket-chat__input__buttons {
+    grid-template-columns: repeat(2, 30px);
+  }
+
+  .page-ticket-chat__input__buttons svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .page-ticket-chat__input__buttons button:last-child svg {
+    width: 15px;
+    height: 15px;
+  }
+}

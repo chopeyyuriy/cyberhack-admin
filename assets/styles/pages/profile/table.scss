@@ -1,0 +1,54 @@
+.page-profile-table {
+  margin-top: 30px;
+  background: rgba(23, 27, 32, 0.68);
+  border-radius: 12px;
+  padding: 30px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.012em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $main_clr_50;
+    }
+
+    &-hint {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+          fill: $main_clr_50;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.012em;
+        color: $main_clr_700;
+
+        a {
+          text-decoration: none;
+          color: $main_clr_50;
+          transition: .25s;
+
+          &:hover {
+            color: $main_clr;
+          }
+        }
+      }
+    }
+  }
+}

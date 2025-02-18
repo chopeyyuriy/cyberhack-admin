@@ -1,0 +1,50 @@
+.page-purchases-product {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  align-items: center;
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    a {
+      display: block;
+      text-decoration: none;
+      transition: .25s;
+
+      &:first-child {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $main_clr_50;
+        
+        &:hover {
+          color: $main_clr;
+        }
+      }
+
+      &:last-child {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-variant: small-caps;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $main_clr_700;
+        margin-top: 8px;
+
+        &:hover {
+          color: $main_clr_50;
+        }
+      }
+    }
+  }
+}

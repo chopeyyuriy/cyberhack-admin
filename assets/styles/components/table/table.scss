@@ -1,0 +1,47 @@
+.table {
+  &-content {
+    padding: 10px;
+    max-height: 445px;
+    overflow-y: auto;
+    margin-top: 10px;
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $line_clr;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(98, 100, 108, 0.48);
+      border-radius: 12px;
+    }
+  }
+
+  &-head {
+    padding: 0 13px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 4px;
+
+    .table-col {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $main_clr_700;
+
+      &:first-child {
+        padding-left: 18px;
+      }
+
+      &:last-child {
+        padding-right: 18px;
+      }
+    }
+  }
+}

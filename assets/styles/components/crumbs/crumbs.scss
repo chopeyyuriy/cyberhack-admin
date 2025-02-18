@@ -1,0 +1,26 @@
+.crumbs {
+  margin-top: 28px;
+  
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: rgba(229, 229, 229, 0.5);
+    transition: .25s;
+
+    span {
+      margin: 0 5px;
+    }
+
+    &:last-child {
+      color: $main_clr_700;
+    }
+
+    &:hover {
+      color: $main_clr;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.page-product-slider {
+  margin-top: 20px;
+
+  &__slides {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    overflow: hidden;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+
+    &-btn {
+      width: 28px;
+      height: 6px;
+      border-radius: 4px;
+      background: rgba(98, 100, 108, 0.44);
+      cursor: pointer;
+      transition: .25s;
+
+      &:hover, &.active {
+        background: $main_clr;
+      }
+
+      &.active {
+        width: 12px;
+      }
+    }
+  }
+
+  .page-product-slide {
+    min-width: 200px;
+    height: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .25s;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(12, 202, 188, 0.48);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(103, 122, 178, 0.4) 0%, rgba(14, 200, 188, 0.4) 100%);
+      opacity: .2;
+      transition: .25s;
+    }
+
+    &__icon {
+      opacity: 0;
+      transition: .25s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover div {
+      opacity: 1;
+    }
+  }
+
+  &-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    &__overlay {
+      background: rgba(17, 19, 23, 0.9);
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
+
+    img, iframe {
+      position: relative;
+      z-index: 1;
+      max-height: 80%;
+      max-width: 80%;
+    }
+
+    iframe {
+      width: 80%;
+      height: 80%;
+    }
+
+    &__left, &__right {
+      position: absolute;
+      height: 100vh;
+      width: 10%;
+      top: 0;
+      z-index: 2;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .25s;
+
+      svg {
+        width: 70px;
+        height: 70px;
+        opacity: .2;
+        transition: .25s;
+
+        path {
+          fill: #95979F;
+        }
+      }
+
+      &:hover {
+        background: rgba(149, 151, 159, .03);
+
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__left {
+      left: 0;
+    }
+    
+    &__right {
+      right: 0;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

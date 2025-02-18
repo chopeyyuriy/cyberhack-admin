@@ -1,0 +1,20 @@
+.page-product-tab {
+  &-functions {
+    .wrapper-content {
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.012em;
+        color: #62646C;
+      }
+    }
+  }
+
+  &-similar {
+    .product-item {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
+  }
+}

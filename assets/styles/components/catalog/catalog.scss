@@ -1,0 +1,21 @@
+.catalog {
+  &-cards {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .catalog-cards {
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    a {
+      margin: 0 auto;
+      max-width: 330px;
+      width: 100%;
+    }
+  }
+}

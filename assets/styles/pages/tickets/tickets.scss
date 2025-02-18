@@ -1,0 +1,25 @@
+.page-tickets {
+  .table {
+    .table-row {
+      grid-template-columns: 0.15fr 0.5fr 0.2fr 0.15fr;
+    }
+  }
+
+  .table-row {
+    transition-duration: .25s;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.01);
+    }
+  }
+
+  .theme {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $main_clr_50;
+  }
+}

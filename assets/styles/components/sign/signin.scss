@@ -1,0 +1,109 @@
+.signin {
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  background: rgba(23, 27, 32, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(48px);
+  border-radius: 12px;
+  width: 530px;
+  box-sizing: border-box;
+
+  &-title {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.012em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $main_clr_50;
+    }
+
+    img {
+      width: 204px;
+      margin-top: 15px;
+    }
+  }
+
+  &-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px 0;
+  }
+
+  &-remember {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    p {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: rgba(219, 219, 219, 0.68);
+    }
+  }
+
+  &-forgot {
+    a {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: rgba(219, 219, 219, 0.68);
+      text-decoration: none;
+      transition: .25s;
+
+      &:hover {
+        color: $main_clr_50;
+      }
+    }
+  }
+
+  &-hint {
+    margin-top: 30px;
+    text-align: center;
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text_clr;
+
+      a {
+        color: $main_clr;
+        text-decoration: none;
+        transition: .25s;
+
+        &:hover {
+          color: #E4EDEF;
+        }
+      }
+    }
+  }
+
+  .btn-large {
+    background: $main_clr;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    transition: .25s;
+
+    &:hover {
+      background: #E4EDEF;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.page-product-requirement {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid $line_clr;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border: 0;
+  }
+
+  &__icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__content {
+    .label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $main_clr_700;
+    }
+
+    .text {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $text_clr;
+      margin-top: 10px;
+    }
+  }
+}

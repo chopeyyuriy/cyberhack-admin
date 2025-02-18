@@ -1,0 +1,70 @@
+.page-purchases {
+  .table {
+    .table-row {
+      grid-template-columns: 0.15fr 0.5fr 0.2fr 0.15fr;
+    }
+
+    .table-col {
+      &:first-child {
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: rgba(98, 100, 108, 0.48);
+          margin-top: 6px;
+        }
+      }
+    }
+
+    .price {
+      text-align: right;
+
+      p {
+        &:first-child {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          font-variant: small-caps;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+          color: $main_clr_50;
+
+          span {
+            color: rgba(219, 219, 219, 0.48);
+            font-size: 14px;
+          }
+        }
+
+        &:last-child {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          color: $main_clr_700;
+          margin-top: 6px;
+        }
+      }
+    }
+
+    .download {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid $line_clr;
+      cursor: pointer;
+      transition: .25s;
+
+      path {
+        transition: .25s;
+      }
+
+      &:hover {
+        path {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+}

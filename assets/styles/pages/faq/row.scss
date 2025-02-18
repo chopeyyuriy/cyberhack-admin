@@ -1,0 +1,36 @@
+.page-faq-row {
+  padding: 60px 0;
+  border-top: 1px solid $line_clr;
+  border-bottom: 1px solid $line_clr;
+
+  &:first-child {
+    padding-top: 80px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $main_clr_700;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $main_clr_700;
+    margin-top: 20px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 450px));
+    gap: 30px;
+  }
+
+  &.small &__cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 330px));
+  }
+}

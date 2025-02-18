@@ -1,0 +1,11 @@
+.page-policy {
+  &__content {
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.012em;
+      color: $main_clr_700;
+    }
+  }
+}

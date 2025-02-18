@@ -1,0 +1,144 @@
+.admin {
+  &-container {
+    margin-top: 30px;
+
+    .tab {
+      min-width: auto;
+      padding: 0 15px;
+
+      &-container {
+        height: 60px;
+      }
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 40px;
+
+    .table-content {
+      max-height: 60vh;
+    }
+
+    .input {
+      grid-template-columns: 1fr;
+
+      &-icon {
+        display: none;
+      }
+    }
+
+    .table-row {
+      transition-duration: 0.25s;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.01);
+      }
+    }
+  }
+
+  &-action {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 30px;
+    background: #171b20;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    color: $text_clr;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      color: $main_clr_50;
+    }
+  }
+
+  &-users {
+    &__pagination {
+      margin-top: 16px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &-contacts {
+    .table-row {
+      grid-template-columns: 0.5fr repeat(4, 1fr);
+      cursor: pointer;
+
+      .table-col {
+        color: $main_clr_50;
+      }
+
+      &.table-head .table-col {
+        color: #62646c;
+      }
+
+      &.table-head {
+        cursor: auto;
+      }
+    }
+  }
+
+  &-requirements {
+    .table-row {
+      grid-template-columns: 0.5fr repeat(3, 1fr);
+    }
+  }
+
+  &-promo-codes {
+    &__products {
+      display: flex;
+      gap: 16px;
+      grid-gap: 16px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.01);
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 8px;
+
+      .input-select {
+        margin: 0;
+      }
+    }
+  }
+
+  &-promos {
+    &__search {
+      display: grid;
+      grid-template-columns: 1fr 70px;
+      grid-gap: 10px;
+      gap: 10px;
+      margin-bottom: 30px;
+
+      svg {
+        path {
+          stroke: none;
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  background: transparent;
+  width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: $line_clr;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(98, 100, 108, 0.48);
+  border-radius: 12px;
+}

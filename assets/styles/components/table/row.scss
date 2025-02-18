@@ -1,0 +1,21 @@
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid $line_clr;
+
+  .table-col {
+    &:first-child {
+      padding-left: 28px;
+    }
+
+    &:last-child {
+      padding-right: 28px;
+    }
+  }
+
+  &:last-child {
+    border: 0;
+  }
+}

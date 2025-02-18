@@ -1,0 +1,94 @@
+.tab {
+  min-width: 302px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: $text_clr;
+  padding: 0 40px;
+  position: relative;
+  transition: .25s;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  path {
+    transition: .25s;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 8px;
+    border-radius: 8px;
+    background: #59B3A8;
+    bottom: -4px;
+    opacity: 0;
+    transition: .25s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 1px;
+    background: $line_clr;
+    right: 0;
+  }
+
+  &:first-child, &:last-child {
+    padding-left: 0;
+    min-width: calc(304px - 20px);
+
+    &::before {
+      width: calc(100% - 40px);
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    color: #59B3A8;
+
+    path {
+      fill: #59B3A8;
+    }
+  }
+
+  &:hover {
+    color: #DBDBDB;
+
+    path {
+      fill: #DBDBDB;
+    }
+  }
+}

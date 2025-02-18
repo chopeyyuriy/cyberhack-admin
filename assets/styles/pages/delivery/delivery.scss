@@ -1,0 +1,57 @@
+.page-delivery {
+  &__content {
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.012em;
+      color: $main_clr_700;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.012em;
+      color: $main_clr_50;
+      margin: 53px 0 20px 0;
+    }
+  }
+
+  &__payments {
+    margin-top: 53px;
+
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $main_clr_700;
+    }
+
+    &-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    &-card {
+      padding: 0 20px;
+      height: 66px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $line_clr;
+      border-radius: 6px;
+    }
+  }
+}

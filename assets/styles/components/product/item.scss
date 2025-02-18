@@ -1,0 +1,71 @@
+.product-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 80px 1fr;
+  gap: 18px;
+  padding: 16px;
+  backdrop-filter: blur(48px);
+  border-radius: 8px;
+  text-decoration: none;
+  width: 100%;
+  transition: .25s;
+  margin-top: 20px;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-data {
+      .name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $main_clr_50;
+      }
+
+      .game {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-variant: small-caps;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $main_clr_700;
+        margin-top: 8px;
+      }
+    }
+
+    &-price {
+      .price {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 26px;
+        color: $text_clr;
+
+        span {
+          color: $main_clr;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background: $line_clr;
+  }
+}

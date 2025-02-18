@@ -1,0 +1,51 @@
+.page-product-functions {
+  height: 44px;
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(90deg,rgba(39, 46, 55, 0),rgba(39,46,55,.24) 51.04%,rgba(39, 46, 55, 0));
+  mask-image: linear-gradient(90deg, rgba(23, 27, 32, 0.18) 9.38%, #272E37 48.75%, rgba(23, 27, 32, 0.18) 93.23%);
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 27px;
+    white-space: nowrap;
+    position: relative;
+    user-select: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: rgba(229, 229, 229, 0.78);
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 1px;
+      background: $line_clr;
+      right: 0;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}

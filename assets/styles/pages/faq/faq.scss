@@ -1,0 +1,53 @@
+.page-faq {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    &-description {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 180%;
+      text-align: right;
+      letter-spacing: 0.012em;
+      color: $main_clr_700;
+    }
+
+    .static-page-title {
+      text-align: left;
+
+      p {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      h1 {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 59px;
+      }
+
+      img {
+        width: 310px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .page-faq__title {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  .page-faq-row__cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .page-faq__popular-cards {
+    grid-template-columns: 1fr !important;
+  }
+}

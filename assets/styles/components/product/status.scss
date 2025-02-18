@@ -1,0 +1,52 @@
+.product-status {
+  padding: 4px 8px;
+  backdrop-filter: blur(24px);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  svg {
+    margin-right: 4px;
+    width: 18px;
+  }
+
+  &.updating {
+    background: rgba(123, 97, 255, 0.12);
+    color: #7B61FF;
+
+    path {
+      fill: #7B61FF;
+    }
+  }
+
+  &.detected {
+    background: rgba(244, 78, 67, 0.12);
+    color: #F44E43;
+
+    path {
+      fill: #F44E43;
+    }
+  }
+
+  &.undetected {
+    background: rgba(118, 219, 161, 0.12);
+    color: #76DBA1;
+
+    path {
+      fill: #76DBA1;
+    }
+  }
+
+  &.risk {
+    background: rgba(224, 173, 50, 0.12);
+    color: #E0AD32;
+
+    path {
+      fill: #E0AD32;
+    }
+  }
+}

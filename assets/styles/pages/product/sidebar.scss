@@ -1,0 +1,13 @@
+.page-product-sidebar {
+  &__hint {
+    border-radius: 12px;
+    background: $main_clr_800;
+    padding: 16px 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.012em;
+    color: #A0A3AE;
+  }
+}

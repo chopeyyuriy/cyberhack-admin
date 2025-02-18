@@ -1,0 +1,78 @@
+.page-faq__popular {
+  margin-top: 60px;
+  
+  &-title {
+    text-align: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.012em;
+      color: $main_clr_50;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 204px;
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    margin-top: 30px;
+  }
+
+  &-card {
+    display: grid;
+    grid-template-columns: 48px 1fr 28px;
+    gap: 20px;
+    align-items: center;
+    background: $line_clr;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    transition: .25s;
+    cursor: pointer;
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.012em;
+      color: $main_clr_50;
+    }
+
+    .chevron {
+      width: 28px;
+      height: 28px;
+      transform: rotate(-90deg);
+
+      path {
+        fill: $main_clr_700;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+}

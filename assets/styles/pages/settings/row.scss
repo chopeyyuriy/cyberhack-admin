@@ -1,0 +1,25 @@
+.page-settings-row {
+  padding: 20px 0;
+  border-bottom: 1px solid $line_clr;
+
+  &:first-child {
+    border-top: 1px solid $line_clr;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $main_clr_700;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    svg {
+      path {
+        stroke: $text_clr;
+      }
+    }
+  }
+}

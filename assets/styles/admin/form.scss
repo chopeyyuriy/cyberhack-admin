@@ -1,0 +1,105 @@
+.admin-form {
+  &__checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+
+    p {
+      color: $text_clr;
+      font-size: 14px;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &-veritical {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__file {
+    margin-top: 20px;
+
+    p {
+      font-size: 13px;
+      color: $text_clr;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      max-width: 50%;
+      max-height: 300px;
+      margin-top: 10px;
+    }
+  }
+
+  &__errors {
+    margin-bottom: 20px;
+
+    p {
+      color: red;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 25px;
+    }
+  }
+
+  &__label {
+    margin-top: 20px;
+    color: $text_clr;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__inline {
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    &-item {
+      &__delete {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        button {
+          background: transparent;
+          color: red;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__sortable {
+    margin-top: 12px;
+
+    &-item {
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      color: #95979f;
+      font-size: 14px;
+      cursor: move;
+      margin-top: 5px;
+    }
+  }
+}

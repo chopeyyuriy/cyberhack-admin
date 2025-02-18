@@ -1,0 +1,49 @@
+.btn {
+  padding: 16px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  border-radius: 8px;
+  transition: 0.2s;
+  user-select: none;
+
+  &_light {
+    color: $main_clr_900;
+    background: $main_clr;
+
+    svg path {
+      stroke: $main_clr_900;
+    }
+
+    &:hover {
+      background: #e4edef;
+    }
+  }
+
+  &_dark {
+    background: $line_clr;
+    color: $main_clr_50;
+    font-weight: 500;
+
+    svg path {
+      stroke: $main_clr_50;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+  &.small {
+    padding: 15px 20px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}

@@ -1,0 +1,15 @@
+.admin-avatars {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 15px;
+
+    &-card {
+      display: block;
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.page-title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.012em;
+  text-transform: capitalize;
+  color: $main_clr;
+  position: relative;
+  
+  span {
+    display: block;
+    color: $main_clr_50;
+    margin-top: 61px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 24px;
+    background-image: url('/images/underline.svg');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 85px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .page-title {
+    h2 {
+      font-size: 40px;
+      line-height: 56px;
+    }
+
+    span {
+      margin-top: 20px;
+    }
+
+    &::after {
+      width: 290px;
+      height: 20px;
+      top: 60px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.page-product-content {
+  box-sizing: border-box;
+  background: $main_clr_800;
+  backdrop-filter: blur(24px);
+  border-radius: 12px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 200px calc(100% - 200px - 30px);
+  gap: 30px;
+  align-items: flex-start;
+
+  &__data {
+    width: 100%;
+  }
+
+  &-description {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.012em;
+    color: $main_clr_700;
+  }
+}

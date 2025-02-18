@@ -1,0 +1,27 @@
+.page-contacts-form {
+  background: rgba(23, 27, 32, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(48px);
+  border-radius: 12px;
+  padding: 40px;
+
+  .btn-large {
+    margin-top: 30px;
+    background: $main_clr;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    transition: .25s;
+
+    &:hover {
+      background: #E4EDEF;
+    }
+  }
+
+  .input svg path {
+    stroke: $text_clr;
+  }
+}

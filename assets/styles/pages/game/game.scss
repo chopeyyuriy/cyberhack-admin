@@ -1,0 +1,50 @@
+.page-game {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 137px;
+    margin-bottom: 109px;
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.012em;
+      text-transform: capitalize;
+      color: $main_clr_50;
+      margin-bottom: 12px;
+    }
+
+    &-description {
+      max-width: 47%;
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 0.012em;
+        color: $main_clr_700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .page-game {
+    &__title {
+      flex-wrap: wrap;
+
+      &-description {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 60px;
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
