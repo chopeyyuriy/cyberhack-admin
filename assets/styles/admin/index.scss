@@ -129,16 +129,16 @@
   }
 }
 
-.scrollbar::-webkit-scrollbar {
+*::-webkit-scrollbar {
   background: transparent;
   width: 4px;
 }
 
-.scrollbar::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: $line_clr;
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
+*r::-webkit-scrollbar-thumb {
   background: rgba(98, 100, 108, 0.48);
   border-radius: 12px;
 }

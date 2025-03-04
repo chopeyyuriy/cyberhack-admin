@@ -139,6 +139,12 @@
               Курс обмена
             </Tab> -->
             <Tab
+              @click="$router.push({ name: 'admin-tickets' })"
+              :active="$route.name == 'admin-tickets'"
+            >
+              Тикеты
+            </Tab>
+            <Tab
               @click="$router.push({ name: 'admin-theme' })"
               :active="$route.name == 'admin-theme'"
             >
@@ -162,6 +168,7 @@
             >
               Уведомления
             </Tab>
+
             <!-- <Tab 
               @click="$router.push({ name: 'admin-payments-stats' })"
               :active="$route.name == 'admin-payments-stats'"
