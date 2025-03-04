@@ -78,7 +78,12 @@
             <div class="ticket-chat-message-user" v-if="msg.from_user_id !== 1">
               {{ msg.from_user.name }}
             </div>
-            <div class="ticket-chat-message">
+            <div
+              class="ticket-chat-message"
+              v-html="msg.from_user_id === 1 ? msg.text : undefined"
+              v-if="msg.from_user_id === 1"
+            ></div>
+            <div class="ticket-chat-message" v-if="msg.from_user_id !== 1">
               {{ msg.text }}
             </div>
             <div class="ticket-chat-message files" v-if="msg.files?.length > 0">
@@ -86,6 +91,7 @@
                 class="ticket-chat-message-file"
                 v-for="file in msg.files"
                 :key="file.id"
+                @click="openFile(file.url)"
               >
                 <img :src="file.url" alt="" srcset="" />
                 <div class="ticket-chat-message-file-name">
@@ -245,6 +251,8 @@ export default defineComponent({
     onMounted(fetchTicket)
     onMounted(fetchMessages)
 
+    setInterval(fetchMessages, 5000)
+
     const sendMessage = async () => {
       if (message.value?.length > 0 && !isLoading.value) {
         isLoading.value = true
@@ -306,6 +314,9 @@ export default defineComponent({
         }
         reader.readAsDataURL(file)
       }
+    },
+    openFile(url: string) {
+      window.open(url, '_blank')
     },
   },
 })
