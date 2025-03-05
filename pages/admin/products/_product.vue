@@ -412,6 +412,28 @@
           </div>
         </template>
       </Wrapper>
+      <Wrapper title="Характеристики">
+        <template #content>
+          <p class="admin-form__label">OS:</p>
+          <InputSelect :data="osOptions" v-model="productRequest.os" />
+
+          <p class="admin-form__label">Processor:</p>
+          <InputSelect :data="cpuOptions" v-model="productRequest.processor" />
+
+          <div class="admin-form__checkbox">
+            <InputCheckbox v-model="productRequest.is_favorable_price" />
+            <p>Выгодная цена</p>
+          </div>
+          <div class="admin-form__checkbox">
+            <InputCheckbox v-model="productRequest.is_new" />
+            <p>New</p>
+          </div>
+          <div class="admin-form__checkbox">
+            <InputCheckbox v-model="productRequest.is_popular" />
+            <p>Популярный</p>
+          </div>
+        </template>
+      </Wrapper>
 
       <div class="admin-form__checkbox">
         <InputCheckbox v-model="productRequest.active" />
@@ -617,6 +639,28 @@ export default defineComponent({
       },
     ]
 
+    const osOptions = [
+      {
+        label: 'Windows 10',
+        value: 1,
+      },
+      {
+        label: 'Windows 11',
+        value: 2,
+      },
+    ]
+
+    const cpuOptions = [
+      {
+        label: 'AMD',
+        value: 1,
+      },
+      {
+        label: 'Intel',
+        value: 2,
+      },
+    ]
+
     const productRequest = ref({
       game_id: 0,
       path: '',
@@ -642,6 +686,11 @@ export default defineComponent({
       price_hint_en: '',
       extra_lite_name: 'LITE',
       extra_full_name: 'FULL',
+      os: '',
+      processor: '',
+      is_favorable_price: false,
+      is_new: false,
+      is_popular: false,
     } as {
       [key: string]: any
     })
@@ -663,10 +712,23 @@ export default defineComponent({
           productRequest.value = {
             ...productRequest.value,
             ...productResponse,
+            // ...(productResponse?.specification ?? {}),
             video: productResponse?.video ?? '',
             requirements: productResponse.requirements.filter(
               (requirement: any) => !!requirement
             ),
+          }
+          if (productResponse?.specification) {
+            const { os, processor, is_favorable_price, is_new, is_popular } =
+              productResponse?.specification
+            productRequest.value = {
+              ...productRequest.value,
+              os,
+              processor,
+              is_favorable_price,
+              is_new,
+              is_popular,
+            }
           }
           imagePreview.value = productResponse.image
           store.commit('crumbs/SET_PATH', [
@@ -826,9 +888,11 @@ export default defineComponent({
         'rates',
         'tags',
       ]
+
       for (const key of Object.keys(productRequest.value)) {
         if (!exceptKeys.includes(key)) {
           let value = productRequest.value[key]
+          console.log(key)
           if (typeof value == 'boolean') value = Number(value)
           formData.append(key, value)
         }
@@ -951,6 +1015,8 @@ export default defineComponent({
       removeInline,
       onChangeInlineImage,
       requirementsOptions,
+      osOptions,
+      cpuOptions,
     }
   },
 })
